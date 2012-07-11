@@ -7,4 +7,4 @@ Author: Tanya Cashorali
 Depends: RCurl, rjson
 Maintainer: Tanya Cashorali <tanyacash@gmail.com>
 Description: This package provides an R wrapper for the Zendesk API
-License: Copyright 2012 under the Simplified BSD License.
+License: BSD
