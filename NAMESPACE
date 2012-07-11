@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+export('zendesk')
+export('getAllUsers')
+export('getTickets')
+export('getAllTickets')
+export('getOrganizations')
+export('getTicketAudits')
+export('getTicket')
