@@ -11,7 +11,7 @@ zendesk(username, password, ZendeskURL)
 This function will initialize a Zendesk.com API session.
 }
 \value{
-returns a data.frame of all users
+Initializes a Zendesk.com API session. Will throw an error if all 3 parameters are not passed to the function.
 }
 \references{
 http://developer.zendesk.com/documentation/rest_api/introduction.html
