@@ -5,7 +5,7 @@
 This function is used to retrieve information on all registered organizations in your Zendesk organization
 }
 \usage{
-getUsers()
+getOrganizations()
 }
 \details{
 This function will return a data.frame containing all fields on every organization.

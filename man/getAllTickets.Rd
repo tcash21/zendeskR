@@ -12,7 +12,7 @@ getAllTickets()
 This function can only be used by Admins within your organization. Tickets are ordered chronologically by created date, from oldest to newest.
 }
 \value{
-returns a data.frame of all ticket ordered chronologically by created date, from oldest to newest.
+returns a data.frame of all tickets ordered chronologically by created date, from oldest to newest.
 }
 \references{
 http://developer.zendesk.com/documentation/rest_api/tickets.html
