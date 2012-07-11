@@ -23,4 +23,3 @@ http://developer.zendesk.com/documentation/rest_api/introduction.html
     zendesk('username', 'password', 'https://help.example.com')
 }}
 \keyword{ zendesk }
-

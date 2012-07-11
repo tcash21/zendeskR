@@ -24,4 +24,3 @@ http://developer.zendesk.com/documentation/rest_api/organizations.html
     organizations <- getOrganizations()
 }}
 \keyword{ getOrganizations }
-

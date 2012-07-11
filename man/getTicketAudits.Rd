@@ -23,4 +23,3 @@ http://developer.zendesk.com/documentation/rest_api/ticket_audits.html
     audits <- getTicketAudits(ticketID)
 }}
 \keyword{ getTicketAudits }
-

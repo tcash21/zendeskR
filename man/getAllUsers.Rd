@@ -24,4 +24,3 @@ http://developer.zendesk.com/documentation/rest_api/users.html
     users <- getUsers()
 }}
 \keyword{ getAllUsers }
-

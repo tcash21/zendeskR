@@ -24,4 +24,3 @@ http://developer.zendesk.com/documentation/rest_api/tickets.html
     tickets <- getAllTickets()
 }}
 \keyword{ getAllTickets }
-
