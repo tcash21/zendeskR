@@ -1,14 +1,14 @@
-zendeskR
-========
-
-R Wrapper to the Zendesk API
+zendeskR - R wrapper to the Zendesk API
+=========
+---
 
 For more information on the Zendesk API see: <a href = "http://developer.zendesk.com/documentation/rest_api/introduction.html">
 http://developer.zendesk.com/documentation/rest_api/introduction.html</a>
 
-Last Update: 7-11-2012
+<i>Last Update: 7-11-2012</i>
 
-<b>Contact</b>
+Contact
+------------
 Tanya Cashorali
 <ul>
 	<li>email: tanyacash@gmail.com</li>
