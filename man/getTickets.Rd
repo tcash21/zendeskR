@@ -5,7 +5,7 @@
 This function is used to return all tickets for a given Zendesk organization
 }
 \usage{
-getTickets(organizationID)
+getTickets(org.id)
 }
 \details{
 This function will return a data.frame of all tickets for a given organization.
@@ -21,6 +21,6 @@ http://developer.zendesk.com/documentation/rest_api/tickets.html
 \examples{
 \dontrun{
     ## This requires Zendesk authentication
-    tickets <- getTickets(organizationID)
+    tickets <- getTickets(org.id)
 }}
 \keyword{ getTickets }
