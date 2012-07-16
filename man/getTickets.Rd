@@ -7,6 +7,11 @@ This function is used to return all tickets for a given Zendesk organization
 \usage{
 getTickets(org.id)
 }
+\arguments{
+	\item{org.id}{
+		A Zendesk organization ID (e.g. 118862)
+	}
+}
 \details{
 This function will return a data.frame of all tickets for a given organization.
 The fields key will be returned within the data.frame as a list.

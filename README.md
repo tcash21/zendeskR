@@ -18,6 +18,12 @@ I will be adding more functionality and API calls over time. If there is a parti
 
 <i>Last Update: 7-11-2012</i>
 
+Example Usage
+------- 
+    ## Initiate a Zendesk API session
+    zendesk("username", "password", "https://help.basho.com") ## Your Zendesk credentials and organization URL
+    users <- getUsers()
+
 Contact
 ------------
 Tanya Cashorali

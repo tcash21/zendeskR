@@ -11,7 +11,7 @@ This package provides an R wrapper to the Zendesk API.
 \tabular{ll}{
 Package: \tab zendeskR\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2012-07-11\cr
 License: \tab Simplified BSD\cr
 }
@@ -23,8 +23,5 @@ Maintainer: Tanya Cashorali <tanyacash@gmail.com>
 \references{
 http://developer.zendesk.com/documentation/rest_api/introduction.html
 }
-\keyword{ package }
-\seealso{
-}
-\examples{
-}
+\keyword{ zendeskR }
+

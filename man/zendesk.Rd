@@ -5,8 +5,19 @@
 This function is used to create a Zendesk.com API session.
 }
 \usage{
-zendesk(username, password, ZendeskURL)
+zendesk(username, password, url)
 }
+\arguments{
+	\item{username}{
+		Your Zendesk username.
+	}
+	\item{password}{
+		Your Zendesk password.
+	}
+	\item{url}{
+		Your organization's Zendesk URL (e.g. https://help.basho.com).
+	}
+}	
 \details{
 This function will initialize a Zendesk.com API session.
 }
@@ -20,6 +31,6 @@ http://developer.zendesk.com/documentation/rest_api/introduction.html
 \examples{
 \dontrun{
     ## This requires Zendesk authentication
-    zendesk('username', 'password', 'https://help.example.com')
+    zendesk('username', 'password', 'https://help.basho.com')
 }}
 \keyword{ zendesk }
