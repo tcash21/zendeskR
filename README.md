@@ -18,6 +18,12 @@ I will be adding more functionality and API calls over time. If there is a parti
 
 <i>Last Update: 7-11-2012</i>
 
+Installation
+---------
+To install this package from the source code available here, download it, and set your R working directory to wherever you saved the file. Then run:
+
+    > install.packages("zendeskR_0.1.tar.gz", repos=NULL, type="source")
+
 Example Usage
 ------- 
     ## Initiate a Zendesk API session
