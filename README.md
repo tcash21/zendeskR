@@ -22,7 +22,7 @@ Example Usage
 ------- 
     ## Initiate a Zendesk API session
     zendesk("username", "password", "https://help.basho.com") ## Your Zendesk credentials and organization URL
-    users <- getUsers()
+    users <- getAllUsers()
 
 Contact
 ------------
