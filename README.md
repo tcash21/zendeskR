@@ -1,8 +1,6 @@
 zendeskR - R wrapper to the Zendesk API
 =========
 
-<b>NOTE:</b> This package does not currently work on Windows. 
-
 For more information on the Zendesk API see: <a href = "http://developer.zendesk.com/documentation/rest_api/introduction.html">
 http://developer.zendesk.com/documentation/rest_api/introduction.html</a>
 
@@ -18,7 +16,7 @@ Current API calls supported
 This package is a work in progress. It started out as a useful utility for myself. 
 I will be adding more functionality and API calls over time. If there is a particular function you would like to see added, please do not hesitate to contact me. 
 
-<i>Last Update: 7-11-2012</i>
+<i>Last Update: 7-17-2012</i>
 
 Installation
 ---------

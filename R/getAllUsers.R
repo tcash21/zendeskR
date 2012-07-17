@@ -1,5 +1,4 @@
 getAllUsers <- function(){
-	urlExists <- url.exists(.ZendeskEnv$data$url)
 	if(interactive() && urlExists){
 	curl <- getCurlHandle()
     	result <- list()
@@ -23,7 +22,6 @@ getAllUsers <- function(){
         users.df <- data.frame(final.result)
 	users.df <- unlistDataFrame(users.df)
         return(users.df)
-    }
 }        
 
 

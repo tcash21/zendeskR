@@ -1,6 +1,4 @@
 getTicket <- function(ticket.id){
-    urlExists <- url.exists(.ZendeskEnv$data$url)
-    if(interactive() && urlExists){
         curl = getCurlHandle()
         stopPaging <- FALSE
         result <- list()
@@ -23,7 +21,6 @@ getTicket <- function(ticket.id){
         ticket.df <- data.frame(final.result)
 	ticket.df <- unlistDataFrame(ticket.df)
         return(ticket.df)
-        }
 }
 
 

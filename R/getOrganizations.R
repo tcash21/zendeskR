@@ -1,6 +1,4 @@
 getOrganizations <- function(){
-    urlExists <- url.exists(.ZendeskEnv$data$url)
-    if(interactive() && urlExists){
         curl = getCurlHandle()
         stopPaging <- FALSE
         result <- list()
@@ -23,5 +21,4 @@ getOrganizations <- function(){
         orgs.df <- data.frame(final.result)
  	orgs.df <- unlistDataFrame(orgs.df)
 	return(orgs.df)
-        }
 }
