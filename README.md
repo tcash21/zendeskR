@@ -22,7 +22,7 @@ Installation
 ---------
 To install from CRAN, type in an R console:
 
-    > install.packages("zendeskR", dependencies=TRUE)
+    > install.packages("zendeskR")
 
 To install this package from the source code available here, download it, and set your R working directory to wherever you saved the file. Then run:
 
