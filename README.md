@@ -23,6 +23,7 @@ I will be adding more functionality and API calls over time. If there is a parti
 Installation
 ---------
 To install from CRAN, type in an R console:
+
     > install.packages("zendeskR", dependencies=TRUE)
 
 To install this package from the source code available here, download it, and set your R working directory to wherever you saved the file. Then run:
