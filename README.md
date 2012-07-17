@@ -1,6 +1,8 @@
 zendeskR - R wrapper to the Zendesk API
 =========
 
+<b>NOTE:</b> This package does not currently work on Windows. 
+
 For more information on the Zendesk API see: <a href = "http://developer.zendesk.com/documentation/rest_api/introduction.html">
 http://developer.zendesk.com/documentation/rest_api/introduction.html</a>
 
