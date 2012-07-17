@@ -1,5 +1,4 @@
 getAllUsers <- function(){
-	if(interactive() && urlExists){
 	curl <- getCurlHandle()
     	result <- list()
     	stopPaging <- FALSE
