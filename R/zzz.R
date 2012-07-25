@@ -28,6 +28,9 @@ function(dataframe){
 		if(length(unlist(dataframe[,i])) == n){
 			dataframe[,i] <- unlist(dataframe[,i])
 		} 
+		if(length(unlist(dataframe[,i])) < n){
+			dataframe[,i] <- as.character(dataframe[,i])
+		}
 	}
 
 	return (dataframe)
