@@ -26,7 +26,7 @@ To install from CRAN, type in an R console:
 
 To install this package from the source code available here, download it, and set your R working directory to wherever you saved the file. Then run:
 
-    > install.packages("zendeskR_0.1.tar.gz", repos=NULL, type="source")
+    > install.packages("zendeskR_0.2.tar.gz", repos=NULL, type="source")
 
 Example Usage
 ------- 
