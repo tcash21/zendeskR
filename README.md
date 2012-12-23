@@ -12,6 +12,7 @@ Current API calls supported
     getTicket(ticket.id)         - return information for the given ticket ID
     getTicketAudits(ticket.id)   - return all audits for the given ticket ID
     getOrganizations()           - return all organizations registered in your Zendesk organization
+    getAllTicketMetrics()        - return all ticket metrics in your Zendesk organization
 
 This package is a work in progress. It started out as a useful utility for myself. 
 I will be adding more functionality and API calls over time. If there is a particular function you would like to see added, please do not hesitate to contact me. 
