@@ -23,5 +23,5 @@ http://developer.zendesk.com/documentation/rest_api/users.html
     ## This requires Zendesk authentication
     zendesk('username', 'password', 'https://help.example.com')
     users <- getAllUsers()
-}
+}}
 \keyword{ getAllUsers }

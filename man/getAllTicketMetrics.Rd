@@ -14,7 +14,7 @@ This function will return a data.frame containing all ticket metrics, such as la
 returns a data.frame of all ticket metrics for all tickets
 }
 \references{
-
+http://developer.zendesk.com/documentation/rest_api/ticket_metrics.html
 }
 \author{Tanya Cashorali}
 \examples{
