@@ -13,7 +13,6 @@ The photo key will be returned within the data.frame as a list.
 }
 \value{
 returns a data.frame of all users
-}
 \references{
 http://developer.zendesk.com/documentation/rest_api/users.html
 }
@@ -21,6 +20,7 @@ http://developer.zendesk.com/documentation/rest_api/users.html
 \examples{
 \dontrun{
     ## This requires Zendesk authentication
+    zendesk('username', 'password', 'https://help.example.com')
     users <- getAllUsers()
-}}
+}
 \keyword{ getAllUsers }
