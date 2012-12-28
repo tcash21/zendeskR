@@ -1,6 +1,6 @@
 \name{getAllUsers}
 \alias{getAllUsers}
-\title{ getAllUsers}
+\title{getAllUsers}
 \description{
 This function is used to retrieve information on all registered Zendesk users in your organization
 }
@@ -13,6 +13,7 @@ The photo key will be returned within the data.frame as a list.
 }
 \value{
 returns a data.frame of all users
+}
 \references{
 http://developer.zendesk.com/documentation/rest_api/users.html
 }
