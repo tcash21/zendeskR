@@ -17,7 +17,7 @@ Current API calls supported
 This package is a work in progress. It started out as a useful utility for myself. 
 I will be adding more functionality and API calls over time. If there is a particular function you would like to see added, please do not hesitate to contact me. 
 
-<i>Last Update: 12-23-2012</i>
+<i>Last Update: 12-28-2012</i>
 
 Installation
 ---------
