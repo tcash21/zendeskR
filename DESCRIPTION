@@ -1,7 +1,7 @@
 Package: zendeskR
 Type: Package
 Title: Zendesk API Wrapper
-Version: 0.1
+Version: 0.3
 Date: 2012-07-11
 Author: Tanya Cashorali
 Depends: RCurl, rjson
