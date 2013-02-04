@@ -11,7 +11,8 @@
 		      tickets = "/api/v2/tickets.json",
 		      audits = "/audits.json",
 		      organizations = "/api/v2/organizations.json",
-          ticket_metrics = "/api/v2/ticket_metrics.json"
+          ticket_metrics = "/api/v2/ticket_metrics.json",
+          satisfaction_ratings = "/api/v2/satisfaction_ratings.json"
 		
             )
     }
