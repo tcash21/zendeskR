@@ -1,7 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 export('zendesk')
 export('getAllUsers')
-export('getTicketsForOrganization')
 export('getAllTickets')
 export('getAllOrganizations')
 export('getTicketAudits')
