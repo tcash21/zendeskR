@@ -16,7 +16,7 @@ getAllTickets <- function(){
 	
 	## Transform the JSON data to a data.frame
         json.data <- lapply(unlist(result), fromJSON)
-        pre.result <- lapply(json.data, function(x) do.call("rbind", x$tickets))
+        pre.result <- lapply(json.data, function(x) ldply(x$tickets, rbind))
         final.result<-ldply(pre.result, rbind)
         tickets.df <- data.frame(final.result)
 	tickets.df <- unlistDataFrame(tickets.df)
