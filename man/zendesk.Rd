@@ -12,10 +12,13 @@ zendesk(username, password, url)
 		Your Zendesk username.
 	}
 	\item{password}{
-		Your Zendesk password.
+		Your Zendesk password (or API token).
 	}
 	\item{url}{
 		Your organization's Zendesk URL (e.g. https://help.basho.com).
+	}
+	\item{use_token}{
+		Create session using a Zendesk API token instead of a password.
 	}
 }	
 \details{
