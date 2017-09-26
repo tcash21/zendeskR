@@ -1,3 +1,22 @@
+#' R Wrapper for Zendesk API
+#'
+#' This package provides an R wrapper to the Zendesk API.
+#'
+#' \tabular{ll}{
+#' Package: \tab zendeskR\cr
+#' Type: \tab Package\cr
+#' Version: \tab 0.1\cr
+#' Date: \tab 2012-07-11\cr
+#' License: \tab Simplified BSD\cr
+#' }
+#' 
+#' @author Tanya Cashorali Tanya Cashorali: <tanyacash@gmail.com>
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/introduction.html}
+#' @docType package
+#' @name zendeskR
+NULL
+
 .ZendeskEnv <- new.env()
 .ZendeskEnv$data <- list()
 
@@ -17,6 +36,28 @@
             )
     }
 }
+
+#' unlistDataFrame
+#'
+#' Utility function to unlist the columns of each data.frame where necessary.
+#'
+#' This function will return a data.frame with the list type columns unlisted 
+#' except where a column is a list of lists.
+#'
+#' @param dataframe A data.frame containing columns of lists to be unlisted.
+#'
+#' @return returns a data.frame
+#' @export
+#' 
+#' @author Tanya Cashorali
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/tickets.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' unlistDataFrame(dataframe)
+#' }
 
 unlistDataFrame <- 
 function(dataframe){

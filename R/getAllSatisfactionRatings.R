@@ -1,3 +1,23 @@
+#' getAllSatisfactionRatings
+#'
+#' This function is used to return all satisfaction ratings for your organization.
+#'
+#' This function can only be used by Admins within your organization. Satisfaction 
+#' Ratings are ordered chronologically by created date, from oldest to newest.
+#'
+#' @return returns a data.frame of all satisfaction ratings ordered chronologically by created date, from oldest to newest.
+#' @export
+#' 
+#' @author John Hornbeck
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/satisfaction_ratings.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' satisfaction_ratings <- getAllSatisfactionRatings()
+#' }
+
 getAllSatisfactionRatings <- function(){
   curl = getCurlHandle()
   stopPaging <- FALSE

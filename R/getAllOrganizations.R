@@ -1,3 +1,24 @@
+#' getAllOrganizations
+#'
+#' This function is used to retrieve information on all 
+#' registered organizations in your Zendesk organization
+#'
+#' This function will return a data.frame containing all fields on every organization.  
+#' The tags key will be returned within the data.frame as a list.
+#'
+#' @return returns a data.frame of all organizations
+#' @export
+#' 
+#' @author Tanya Cashorali 
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/organizations.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' organizations <- getAllOrganizations()
+#' }
+
 getAllOrganizations <- function(){
         curl = getCurlHandle()
         stopPaging <- FALSE

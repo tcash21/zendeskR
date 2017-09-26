@@ -1,10 +1,29 @@
-zendesk <- function(username, password, url, use_token = FALSE){
+#' zendesk
+#'
+#' This function is used to create a Zendesk.com API session.
+#'
+#' This function will initialize a Zendesk.com API session.
+#'
+#' @param username Your Zendesk username.
+#' @param password Your Zendesk password (or API token).
+#' @param url Your organization's Zendesk URL (e.g. https://help.basho.com).
+#'
+#' @return Initializes a Zendesk.com API session. Will throw an error if all 3 parameters are not passed to the function.
+#' @export
+#' 
+#' @author Tanya Cashorali
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/introduction.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' zendesk('username', 'password', 'https://help.basho.com')
+#' }
+
+zendesk <- function(username, password, url){
     if(!is.null(username) & !is.null(password) & !is.null(url)){
-        if(use_token){
-            .ZendeskEnv$data$username <- paste0(username,'/token')
-        }else{
-            .ZendeskEnv$data$username <- username
-        }
+        .ZendeskEnv$data$username <- username
         .ZendeskEnv$data$password <- password
         .ZendeskEnv$data$url <- gsub("\\/$","", url)
     }
