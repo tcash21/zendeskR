@@ -1,3 +1,24 @@
+#' getAllTicketMetrics
+#'
+#' This function is used to retrieve all ticket metrics from all tickets in your Zendesk organization
+#'
+#' This function will return a data.frame containing all ticket metrics, 
+#' such as latest_comment_added_at, first_resolution_time_in_minutes, etc. 
+#' on every ticket.
+#'
+#' @return returns a data.frame of all ticket metrics for all tickets
+#' @export
+#' 
+#' @author Tanya Cashorali
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/ticket_metrics.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' ticket_metrics <- getAllTicketMetrics()
+#' }
+
 getAllTicketMetrics <- function(){
   curl <- getCurlHandle()
   result <- list()

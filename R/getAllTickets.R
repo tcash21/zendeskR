@@ -1,3 +1,23 @@
+#' getAllTickets
+#'
+#' This function is used to return all tickets stored in your organization.
+#'
+#' This function can only be used by Admins within your organization. 
+#' Tickets are ordered chronologically by created date, from oldest to newest.
+#'
+#' @return returns a data.frame of all tickets ordered chronologically by created date, from oldest to newest.
+#' @export
+#' 
+#' @author Tanya Cashorali
+#'
+#' @references \url{http://developer.zendesk.com/documentation/rest_api/tickets.html}
+#'
+#' @examples \dontrun{
+#' 
+#' ## This requires Zendesk authentication
+#' tickets <- getAllTickets()
+#' }
+
 getAllTickets <- function(){
         curl = getCurlHandle()
         stopPaging <- FALSE

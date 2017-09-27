@@ -9,3 +9,4 @@ Maintainer: Tanya Cashorali <tanyacash@gmail.com>
 Description: This package provides an R wrapper for the Zendesk API
 Github: http://www.github.com/tcash21/zendeskR
 License: GPL-2
+RoxygenNote: 6.0.1
