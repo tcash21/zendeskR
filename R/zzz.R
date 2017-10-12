@@ -59,30 +59,48 @@ NULL
 zendesk_get <- function(zd_call, ...){
     results <- list()
     i <- 1
-    response <- httr::GET(paste0(.ZendeskEnv$data$url, '/api/v2/',
-                                 zd_call, '.json'),
-                         httr::authenticate(.ZendeskEnv$data$username,
-                                            .ZendeskEnv$data$password),
-                         query = list(...))
-    response_json <- httr::content(response, 'text')
-    results[[i]] <- jsonlite::fromJSON(response_json)[[zd_call]]
-    results[[i]] <- jsonlite::flatten(results[[i]])
-    stop_paging <- is.null(httr::content(response)$next_page)
+    endpoint <- paste0(.ZendeskEnv$data$url, '/api/v2/', zd_call, '.json')
+    response <- zendesk_call(endpoint, zd_call, ...)
+    results[[i]] <- response$df
+    stop_paging <- is.null(response$next_page)
     
     while(!stop_paging) {
         i <- i + 1
-        response <- httr::GET(httr::content(response)$next_page,
-                              httr::authenticate(.ZendeskEnv$data$username,
-                                                 .ZendeskEnv$data$password))
-        response_json <- httr::content(response, 'text')
-        results[[i]] <- jsonlite::fromJSON(response_json)[[zd_call]]
-        results[[i]] <- jsonlite::flatten(results[[i]])
-        stop_paging <- is.null(httr::content(response)$next_page)
+        response <- zendesk_call(response$next_page, zd_call,...)
+        results[[i]] <- response$df
+        stop_paging <- is.null(response$next_page)
     }
-
     dplyr::bind_rows(results)
 }
 
+
+#' zendesk_call
+#' 
+#' A helper function for making api calls in zendesk_get funtion
+#' 
+#' This function will make one api call to the provided link and return a list
+#' of the dataframe with the content of the api call as well as the next link
+#' provided by the cull (will be null if there are no more pages)
+#'
+#' @param link the full api endpoint link to be called
+#' @param zd_call the endpoint to call
+#' @param ... any valid parameter to be passed from zendesk_get
+#'
+#' @return a list of the resulting dataframe from one api call and its next link
+#'
+#' @examples
+zendesk_call <- function(link, zd_call, ...){
+    result <- list()
+    response <- httr::GET(link,
+                          httr::authenticate(.ZendeskEnv$data$username,
+                                             .ZendeskEnv$data$password),
+                          query = list(...))
+    response_json <- httr::content(response, 'text')
+    result$df <- jsonlite::fromJSON(response_json)[[zd_call]]
+    result$df <- jsonlite::flatten(result$df)
+    result$next_page <- httr::content(response)$next_page
+    result
+}
 
 #' unlistDataFrame
 #'
