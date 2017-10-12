@@ -66,6 +66,7 @@ zendesk_get <- function(zd_call, ...){
                          query = list(...))
     response_json <- httr::content(response, 'text')
     results[[i]] <- jsonlite::fromJSON(response_json)[[zd_call]]
+    results[[i]] <- jsonlite::flatten(results[[i]])
     stop_paging <- is.null(httr::content(response)$next_page)
     
     while(!stop_paging) {
@@ -75,19 +76,13 @@ zendesk_get <- function(zd_call, ...){
                                                  .ZendeskEnv$data$password))
         response_json <- httr::content(response, 'text')
         results[[i]] <- jsonlite::fromJSON(response_json)[[zd_call]]
+        results[[i]] <- jsonlite::flatten(results[[i]])
         stop_paging <- is.null(httr::content(response)$next_page)
     }
-    tidy_results(results)
+
+    dplyr::bind_rows(results)
 }
 
-tidy_results <- function(results_list){
-    output <- data.frame()
-    for(i in 1:length(results_list)){
-        output <- dplyr::bind_rows(output, 
-                                   jsonlite::flatten(results_list[[i]]))
-    }
-    output
-}
 
 #' unlistDataFrame
 #'
